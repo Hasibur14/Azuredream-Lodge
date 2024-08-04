@@ -1,0 +1,22 @@
+
+.font-primary {
+    font-family: 'Playfair Display', serif;
+}
+
+.font-secondary {
+    font-family: 'Urbanist', sans-serif;
+}
+
+
+.bg-dream-home {
+    background-image: url('../images/background.png');
+    background-size: cover;
+    background-position: center;
+    
+  }
+
+  
+/* Custom styles
+.container {
+    max-width: 1200px;
+} */
