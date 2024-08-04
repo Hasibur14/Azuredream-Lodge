@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Azuredream Lodge</title>
-
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -14,66 +13,66 @@
     <header>
         <!-- ........navbar section.......... -->
         <nav class="shadow-lg bg-neutral-100">
-            <div class="container navbar mx-auto px-8 lg:px-0">
-                <div class="navbar-start">
-                    <div class="dropdown">
-                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M4 6h16M4 12h8m-8 6h16" />
-                            </svg>
+            <div class="container mx-auto px-8 lg:px-0">
+                <div class="flex items-center justify-between py-4">
+                    <div class="flex items-center">
+                        <div class="dropdown">
+                            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 6h16M4 12h8m-8 6h16" />
+                                </svg>
+                            </div>
+                            <ul tabindex="0"
+                                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-200 rounded-box w-52">
+                                <li>
+                                    <a href="#">Home</a>
+                                    <a href="#">About</a>
+                                    <a href="#">Rooms</a>
+                                    <a href="#">Cases</a>
+                                    <a href="#">Page</a>
+                                </li>
+                                <div class="mr-4 ">
+                                    <a href="">Login</a> /
+                                    <a href="">SignUp</a>
+                                </div>
+                                <button class="btn bg-[#B68C5A] text-white text-sm">Reservation</button>
+                            </ul>
                         </div>
-                        <ul tabindex="0"
-                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-200 rounded-box w-52">
-                            <li>
-                                <a href="#">Home</a>
-                                <a href="#">About</a>
-                                <a href="#">Rooms</a>
-                                <a href="#">Cases</a>
-                                <a href="#">Page</a>
-                            </li>
-                            <button class="btn bg-[#B68C5A] text-white text-sm">Reservation</button>
-                        </ul>
+                        <div class="flex items-center">
+                            <img class="h-14" src="./images/logo.png" alt="Logo">
+                        </div>
                     </div>
-                    <div class="navbar">
-                        <img class="w-26 h-200" src="./images/logo.png" alt="">
-                    </div>
-                    <div class="navbar-center text-lg text-[#131318] space-x-8 ml-8 hidden mg  lg:flex">
+                    <div class="hidden lg:flex items-center space-x-8">
                         <a class="hover:text-[#B68C5A] duration-300" href="#">Home</a>
-                        <a class="hover:text-[#B68C5A] duration-300" href="#">about </a>
-                        <a class="hover:text-[#B68C5A] duration-300" href="#">Rooms </a>
+                        <a class="hover:text-[#B68C5A] duration-300" href="#">About</a>
+                        <a class="hover:text-[#B68C5A] duration-300" href="#">Rooms</a>
                         <a class="hover:text-[#B68C5A] duration-300" href="#">Blog</a>
                         <a class="hover:text-[#B68C5A] duration-300" href="#">Page</a>
                     </div>
-                </div>
-
-                <div class="navbar-end">
-                    <div class=" lg:flex space-x-3 items-center justify-between px-6 py-3 ">
-                        <img class="hidden lg:flex" src="./assets/Frame.png" alt="">
+                    <div class="flex items-center space-x-4">
+                        <div class="hidden lg:flex space-x-2">
+                            <a href="" class="hover:text-[#B68C5A] duration-300">Login</a> /
+                            <a href="" class="hover:text-[#B68C5A] duration-300">SignUp</a>
+                        </div>
+                        <button
+                            class="btn bg-[#B68C5A] text-white text-lg rounded-full hidden lg:flex hover:bg-yellow-700">
+                            Reservation
+                        </button>
                     </div>
-
-                    <div class="mr-4">
-                        <a href="" class="hover:text-[#B68C5A] duration-300">Login</a> /
-                        <a href="" class="hover:text-[#B68C5A] duration-300">SignUp</a>
-                    </div>
-                    <button
-                        class="btn bg-[#B68C5A]  text-white text-lg rounded-full hidden lg:flex hover:bg-yellow-700">
-                        Reservation</button>
                 </div>
             </div>
         </nav>
     </header>
 
-
     <main class="">
 
     </main>
+
     <footer>
 
     </footer>
-
-
 </body>
 
 </html>
