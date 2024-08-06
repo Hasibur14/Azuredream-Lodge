@@ -102,7 +102,7 @@
                                 Discover now <img src="./images/arrow_icon.png" alt="" class="ml-2">
                             </button>
                             <img class="bg-black p-1 w-10 h-10 rounded-full" src="./images/video-player.png" alt="">
-                            <p class="mt-1.5">Watch our story</p>
+                            <p class="mt-1.5 hover:text-red-500">Watch our story</p>
                         </div>
 
                     </div>
@@ -149,6 +149,7 @@
                             <h5 class="md:text-lg font-semibold font-primary">Room's</h5>
                             <p>Add Room's</p>
                         </div>
+                        <span class="border-r border-dashed border-gray-300"></span>
                         <div class="px-4">
                             <img class="bg-color rounded-full p-1 md:p-3 cursor-pointer" src="./images/Search.png"
                                 alt="">
@@ -293,7 +294,113 @@
 
 
         <!-- Review section -->
-        <section>
+        <section class="my-16">
+            <div class="flex flex-col md:flex-row bg-white rounded-lg overflow-hidden">
+                <div class="w-full md:w-1/2 bg-black">
+                    <div class="lg:ml-36 text-white p-8 flex flex-col justify-between">
+                        <h2 class="font-primary font-extrabold">Testimonial</h2>
+                        <h3 class="text-3xl font-bold mb-4 font-primary">Rave Reviews from Our Satisfied Guests</h3>
+                        <div class="flex items-center space-x-2 mt-8">
+                            <button id="prevBtn"
+                                class="bg-white text-black rounded-full w-8 h-8 flex items-center justify-center">&larr;</button>
+                            <div class="flex space-x-1">
+                                <span id="dot1" class="block w-2 h-2 bg-white rounded-full"></span>
+                                <span id="dot2" class="block w-2 h-2 bg-gray-500 rounded-full"></span>
+                                <span id="dot3" class="block w-2 h-2 bg-gray-500 rounded-full"></span>
+                            </div>
+                            <button id="nextBtn"
+                                class="bg-white text-black rounded-full w-8 h-8 flex items-center justify-center">&rarr;</button>
+                        </div>
+                    </div>
+                </div>
+                <!--  slider -->
+                <div class="md:w-1/2 p-8 flex bg-[#FFF9F6] overflow-hidden font-secondary">
+                    <div id="slider" class="flex gap-4 transition-transform duration-300">
+                        <div class="testimonial-slide bg-white p-6 rounded-lg shadow-md flex-shrink-0 w-full">
+                            <div class="flex items-center mb-4">
+                                <img src="./images/person.png" alt="Client photo" class="w-12 h-12 rounded-full mr-4">
+                                <div>
+                                    <h3 class="text-xl font-semibold">Arman</h3>
+                                    <p class="text-gray-600">Web Developer</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-700">Amazing design, easy to customize and a design quality
+                                superlative account on its cloud platform for the optimized performance. And we
+                                didn't on our original designs.</p>
+                            <div class="mt-4 flex">
+                                <span class="text-yellow-400">&#9733;</span>
+                                <span class="text-yellow-400">&#9733;</span>
+                                <span class="text-yellow-400">&#9733;</span>
+                                <span class="text-yellow-400">&#9733;</span>
+                                <span class="text-yellow-400">&#9733;</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-slide bg-white p-6 rounded-lg shadow-md flex-shrink-0 w-full">
+                            <div class="flex items-center mb-4">
+                                <img src="./images/person.png" alt="Client photo" class="w-12 h-12 rounded-full mr-4">
+                                <div>
+                                    <h3 class="text-xl font-semibold">Alif</h3>
+                                    <p class="text-gray-600">Webflow Developer</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-700">Amazing design, easy to customize and a design quality
+                                superlative account on its cloud platform for the optimized performance. And we
+                                didn't on our original designs.</p>
+                            <div class="mt-4 flex">
+                                <span class="text-yellow-400">&#9733;</span>
+                                <span class="text-yellow-400">&#9733;</span>
+                                <span class="text-yellow-400">&#9733;</span>
+                                <span class="text-yellow-400">&#9733;</span>
+                                <span class="text-yellow-400">&#9733;</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-slide bg-white p-6 rounded-lg shadow-md flex-shrink-0 w-full">
+                            <div class="flex items-center mb-4">
+                                <img src="./images/person.png" alt="Client photo" class="w-12 h-12 rounded-full mr-4">
+                                <div>
+                                    <h3 class="text-xl font-semibold">Maruf</h3>
+                                    <p class="text-gray-600">Front-End Developer</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-700">Assertively cultivate B2C growth strategies whereas functional
+                                platforms. Interactively procrastinate..</p>
+                            <div class="mt-4 flex">
+                                <span class="text-yellow-400">&#9733;</span>
+                                <span class="text-yellow-400">&#9733;</span>
+                                <span class="text-yellow-400">&#9733;</span>
+                                <span class="text-yellow-400">&#9733;</span>
+                                <span class="text-yellow-400">&#9733;</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                const slider = document.getElementById('slider');
+                const prevBtn = document.getElementById('prevBtn');
+                const nextBtn = document.getElementById('nextBtn');
+                const dots = [document.getElementById('dot1'), document.getElementById('dot2'), document.getElementById('dot3')];
+
+                let currentIndex = 0;
+
+                function updateSlider() {
+                    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+                    dots.forEach((dot, index) => {
+                        dot.classList.toggle('bg-white', index === currentIndex);
+                        dot.classList.toggle('bg-gray-500', index !== currentIndex);
+                    });
+                }
+
+                prevBtn.addEventListener('click', () => {
+                    currentIndex = (currentIndex > 0) ? currentIndex - 1 : dots.length - 1;
+                    updateSlider();
+                });
+
+                nextBtn.addEventListener('click', () => {
+                    currentIndex = (currentIndex < dots.length - 1) ? currentIndex + 1 : 0;
+                    updateSlider();
+                });
+            </script>
 
         </section>
 
